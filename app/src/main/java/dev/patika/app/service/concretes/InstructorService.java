@@ -1,6 +1,5 @@
 package dev.patika.app.service.concretes;
 
-import dev.patika.app.dao.concretes.CourseDao;
 import dev.patika.app.dao.concretes.InstructorDao;
 import dev.patika.app.model.Instructor;
 import dev.patika.app.service.abstracts.BaseService;
