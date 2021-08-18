@@ -30,7 +30,7 @@ public class StudentDao implements BaseDao<Student> {
     }
 
     @Override
-    public void delete(Student student) {
+    public void delete(int id) {
 
     }
 }

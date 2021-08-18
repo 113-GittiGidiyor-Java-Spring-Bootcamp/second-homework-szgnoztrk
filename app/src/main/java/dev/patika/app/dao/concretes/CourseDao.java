@@ -30,7 +30,7 @@ public class CourseDao implements BaseDao<Course> {
     }
 
     @Override
-    public void delete(Course course) {
+    public void delete(int id) {
 
     }
 }
