@@ -27,9 +27,7 @@ public class StudentService implements BaseService<Student> {
     }
 
     @Override
-    public void save(Student student) {
-        this.studentDao.save(student);
-    }
+    public void save(Student student) { this.studentDao.save(student); }
 
     @Override
     public void update(Student student) {
