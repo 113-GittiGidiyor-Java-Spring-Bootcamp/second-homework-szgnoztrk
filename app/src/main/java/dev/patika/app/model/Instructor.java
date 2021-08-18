@@ -1,5 +1,7 @@
 package dev.patika.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
@@ -22,6 +24,7 @@ public class Instructor {
     @Column(name = "instructor_phone")
     private String phoneNumber;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "instructor")
     private List<Course> courses;
 

@@ -27,20 +27,18 @@ public class InstructorController {
     }
 
     @PostMapping("/instructors")
-    public String save(@RequestBody Instructor instructor){
-        this.instructorService.save(instructor);
-        return "ok";
+    public Instructor save(@RequestBody Instructor instructor){
+
+        return this.instructorService.save(instructor);
     }
 
     @PutMapping("/instructors")
-    public String update(@RequestBody Instructor instructor) {
-        this.instructorService.update(instructor);
-        return "ok";
+    public Instructor update(@RequestBody Instructor instructor) {
+        return this.instructorService.update(instructor);
     }
 
     @DeleteMapping("/instructors/{id}")
     public String delete(@PathVariable int id){
-        this.instructorService.delete(id);
-        return "ok";
+        return this.instructorService.delete(id);
     }
 }

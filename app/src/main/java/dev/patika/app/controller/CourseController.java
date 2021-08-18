@@ -27,20 +27,17 @@ public class CourseController {
     }
 
     @PostMapping("/courses")
-    public String save(@RequestBody Course course){
-        this.courseService.save(course);
-        return "ok";
+    public Course save(@RequestBody Course course){
+        return this.courseService.save(course);
     }
 
     @PutMapping("/courses")
-    public String update(@RequestBody Course course) {
-        this.courseService.update(course);
-        return "ok";
+    public Course update(@RequestBody Course course) {
+        return this.courseService.update(course);
     }
 
     @DeleteMapping("/courses/{id}")
     public String delete(@PathVariable int id){
-        this.courseService.delete(id);
-        return "ok";
+        return this.courseService.delete(id);
     }
 }

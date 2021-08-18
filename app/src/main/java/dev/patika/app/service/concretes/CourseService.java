@@ -25,17 +25,17 @@ public class CourseService implements BaseService<Course> {
     }
 
     @Override
-    public void save(Course course) {
-        this.courseDao.save(course);
+    public Course save(Course course) {
+        return this.courseDao.save(course);
     }
 
     @Override
-    public void update(Course course) {
-        this.courseDao.update(course);
+    public Course update(Course course) {
+        return this.courseDao.update(course);
     }
 
     @Override
-    public void delete(int id) {
-        this.courseDao.delete(id);
+    public String delete(int id) {
+        return this.courseDao.delete(id);
     }
 }

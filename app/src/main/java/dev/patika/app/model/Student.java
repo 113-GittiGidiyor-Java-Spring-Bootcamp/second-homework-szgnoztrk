@@ -1,5 +1,7 @@
 package dev.patika.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -25,6 +27,7 @@ public class Student {
     @Column(name = "student_gender")
     private String gender;
 
+    @JsonIgnore
     @ManyToMany
     private List<Course> courses;
 

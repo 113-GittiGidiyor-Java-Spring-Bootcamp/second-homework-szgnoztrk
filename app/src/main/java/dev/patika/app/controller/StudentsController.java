@@ -27,21 +27,18 @@ public class StudentsController {
     }
 
     @PostMapping("/students")
-    public String save(@RequestBody Student student){
-        this.studentService.save(student);
-        return "ok";
+    public Student save(@RequestBody Student student){
+        return this.studentService.save(student);
     }
 
     @PutMapping("/students")
-    public String update(@RequestBody Student student) {
-        this.studentService.update(student);
-        return "ok";
+    public Student update(@RequestBody Student student) {
+        return this.studentService.update(student);
     }
 
     @DeleteMapping("/students/{id}")
     public String delete(@PathVariable int id){
-        this.studentService.delete(id);
-        return "ok";
+        return this.studentService.delete(id);
     }
 
 

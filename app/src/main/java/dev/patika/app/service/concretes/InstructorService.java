@@ -1,6 +1,7 @@
 package dev.patika.app.service.concretes;
 
 import dev.patika.app.dao.concretes.InstructorDao;
+import dev.patika.app.model.Course;
 import dev.patika.app.model.Instructor;
 import dev.patika.app.service.abstracts.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,17 +25,17 @@ public class InstructorService implements BaseService<Instructor> {
     }
 
     @Override
-    public void save(Instructor instructor) {
-        this.instructorDao.save(instructor);
+    public Instructor save(Instructor instructor) {
+        return this.instructorDao.save(instructor);
     }
 
     @Override
-    public void update(Instructor instructor) {
-        this.instructorDao.update(instructor);
+    public Instructor update(Instructor instructor) {
+        return this.instructorDao.update(instructor);
     }
 
     @Override
-    public void delete(int id) {
-        this.instructorDao.delete(id);
+    public String delete(int id) {
+        return this.instructorDao.delete(id);
     }
 }
